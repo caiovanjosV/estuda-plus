@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estuda+ | Organização de Estudos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">+</div>
+        <div>
+          <strong>Estuda<span>+</span></strong>
+          <small>Organize. Estude. Evolua.</small>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <button class="nav-item active" data-page="dashboard">⌂ <span>Dashboard</span></button>
+        <button class="nav-item" data-page="disciplinas">▣ <span>Disciplinas</span></button>
+        <button class="nav-item" data-page="atividades">✓ <span>Atividades</span></button>
+        <button class="nav-item" data-page="metas">◉ <span>Metas de Estudo</span></button>
+        <button class="nav-item" data-page="estudos">◷ <span>Registrar Estudo</span></button>
+        <button class="nav-item" data-page="historico">☷ <span>Histórico</span></button>
+        <button class="nav-item" data-page="perfil">♙ <span>Meu Perfil</span></button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="mini-profile">
+          <div class="avatar">CV</div>
+          <div><strong>Caio Victor</strong><small>Estudante</small></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <button class="mobile-menu" id="mobileMenu">☰</button>
+          <span class="breadcrumb">Estuda+ / <strong id="pageTitle">Dashboard</strong></span>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" title="Notificações">♧</button>
+          <button class="profile-pill" data-page="perfil"><span class="avatar small">CV</span> Caio Victor</button>
+        </div>
+      </header>
+
+      <section id="page-dashboard" class="page active">
+        <div class="welcome">
+          <div>
+            <p class="eyebrow">QUARTA-FEIRA, 30 DE SETEMBRO</p>
+            <h1>Olá, Caio! 👋</h1>
+            <p>Vamos manter o foco nos seus estudos hoje?</p>
+          </div>
+          <button class="primary" data-page="estudos">+ Registrar estudo</button>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-icon purple">◷</div><div><span>Horas estudadas</span><strong>18h 40min</strong><small class="up">↑ 12% esta semana</small></div></article>
+          <article class="stat-card"><div class="stat-icon blue">✓</div><div><span>Atividades concluídas</span><strong>24</strong><small class="up">↑ 6 esta semana</small></div></article>
+          <article class="stat-card"><div class="stat-icon orange">◉</div><div><span>Metas em andamento</span><strong>4</strong><small>2 próximas do prazo</small></div></article>
+          <article class="stat-card"><div class="stat-icon green">★</div><div><span>Sequência atual</span><strong>7 dias</strong><small class="up">Continue assim!</small></div></article>
+        </div>
+
+        <div class="content-grid">
+          <article class="card progress-card">
+            <div class="card-head"><div><h2>Progresso semanal</h2><p>Horas estudadas nos últimos 7 dias</p></div><span class="badge">Meta: 20h</span></div>
+            <div class="chart">
+              <div class="bar-wrap"><span>2h</span><div class="bar" style="height:58%"></div><small>Seg</small></div>
+              <div class="bar-wrap"><span>3h</span><div class="bar" style="height:78%"></div><small>Ter</small></div>
+              <div class="bar-wrap"><span>1h</span><div class="bar" style="height:35%"></div><small>Qua</small></div>
+              <div class="bar-wrap"><span>4h</span><div class="bar highlight" style="height:94%"></div><small>Qui</small></div>
+              <div class="bar-wrap"><span>3h</span><div class="bar" style="height:78%"></div><small>Sex</small></div>
+              <div class="bar-wrap"><span>3h</span><div class="bar" style="height:78%"></div><small>Sáb</small></div>
+              <div class="bar-wrap"><span>2h</span><div class="bar" style="height:58%"></div><small>Dom</small></div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-head"><div><h2>Metas de estudo</h2><p>Acompanhe seus objetivos</p></div><button class="link-btn" data-page="metas">Ver todas</button></div>
+            <div class="goal">
+              <div class="goal-top"><strong>Estudar 20 horas</strong><span>75%</span></div>
+              <div class="progress"><i style="width:75%"></i></div><small>15h de 20h</small>
+            </div>
+            <div class="goal">
+              <div class="goal-top"><strong>Concluir TCC</strong><span>60%</span></div>
+              <div class="progress"><i style="width:60%"></i></div><small>3 de 5 etapas</small>
+            </div>
+            <div class="goal">
+              <div class="goal-top"><strong>Matemática Discreta</strong><span>40%</span></div>
+              <div class="progress"><i style="width:40%"></i></div><small>4 de 10 atividades</small>
+            </div>
+          </article>
+        </div>
+
+        <div class="content-grid bottom">
+          <article class="card">
+            <div class="card-head"><div><h2>Próximas atividades</h2><p>Não deixe para depois</p></div><button class="link-btn" data-page="atividades">Ver todas</button></div>
+            <div class="activity-row"><span class="dot purple-dot"></span><div><strong>Finalizar documentação do TCC</strong><small>Desenvolvimento de Aplicações • Hoje</small></div><span class="tag danger">Urgente</span></div>
+            <div class="activity-row"><span class="dot blue-dot"></span><div><strong>Estudar funções matemáticas</strong><small>Matemática Discreta • Amanhã</small></div><span class="tag">Pendente</span></div>
+            <div class="activity-row"><span class="dot green-dot"></span><div><strong>Revisar requisitos do sistema</strong><small>Projeto • 02/10</small></div><span class="tag success">Planejada</span></div>
+          </article>
+          <article class="card quote-card">
+            <div class="quote-mark">“</div>
+            <p>Pequenos avanços todos os dias constroem grandes resultados.</p>
+            <small>Seu foco de hoje é o seu resultado de amanhã.</small>
+          </article>
+        </div>
+      </section>
+
+      <section id="page-disciplinas" class="page">
+        <div class="page-heading"><div><p class="eyebrow">ORGANIZAÇÃO</p><h1>Minhas Disciplinas</h1><p>Gerencie as matérias que fazem parte da sua rotina.</p></div><button class="primary" id="addDisciplina">+ Nova disciplina</button></div>
+        <div class="cards-3" id="disciplinasList"></div>
+      </section>
+
+      <section id="page-atividades" class="page">
+        <div class="page-heading"><div><p class="eyebrow">PLANEJAMENTO</p><h1>Atividades de Estudo</h1><p>Organize suas tarefas e acompanhe o que precisa ser feito.</p></div><button class="primary" id="addAtividade">+ Nova atividade</button></div>
+        <article class="card table-card">
+          <div class="filters"><input id="activitySearch" placeholder="Pesquisar atividade..."><select><option>Todas as disciplinas</option><option>Matemática Discreta</option><option>TCC</option></select><select><option>Todos os status</option><option>Pendente</option><option>Concluída</option></select></div>
+          <div class="table-wrap"><table><thead><tr><th>Atividade</th><th>Disciplina</th><th>Prazo</th><th>Status</th><th>Ações</th></tr></thead><tbody id="activitiesTable"></tbody></table></div>
+        </article>
+      </section>
+
+      <section id="page-metas" class="page">
+        <div class="page-heading"><div><p class="eyebrow">OBJETIVOS</p><h1>Metas de Estudo</h1><p>Defina objetivos e acompanhe sua evolução.</p></div><button class="primary" id="addMeta">+ Nova meta</button></div>
+        <div class="cards-3" id="metasList"></div>
+      </section>
+
+      <section id="page-estudos" class="page">
+        <div class="page-heading"><div><p class="eyebrow">REGISTRO</p><h1>Registrar Estudo</h1><p>Registre seu tempo de estudo e mantenha seu histórico atualizado.</p></div></div>
+        <div class="form-layout">
+          <article class="card form-card">
+            <h2>Novo registro</h2><p class="muted">Preencha as informações da sessão de estudo.</p>
+            <form id="studyForm">
+              <label>Disciplina<select id="studyDiscipline" required><option value="">Selecione...</option><option>Matemática Discreta</option><option>Desenvolvimento de Aplicações</option><option>TCC</option><option>Estágio Supervisionado</option></select></label>
+              <div class="two-cols"><label>Data<input type="date" id="studyDate" required></label><label>Tempo (minutos)<input type="number" id="studyMinutes" min="1" placeholder="Ex.: 90" required></label></div>
+              <label>Conteúdo estudado<textarea id="studyContent" rows="4" placeholder="Ex.: Revisão de requisitos e desenvolvimento do front-end"></textarea></label>
+              <button class="primary full" type="submit">Salvar registro</button>
+            </form>
+          </article>
+          <article class="card tips">
+            <div class="tip-icon">💡</div><h2>Dica do Estuda+</h2><p>Registre cada sessão logo após estudar. Assim seu histórico e seu progresso ficam sempre atualizados.</p>
+            <div class="tip-stat"><strong>18h 40min</strong><span>estudadas esta semana</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="page-historico" class="page">
+        <div class="page-heading"><div><p class="eyebrow">ACOMPANHAMENTO</p><h1>Histórico de Estudos</h1><p>Consulte suas sessões de estudo anteriores.</p></div></div>
+        <article class="card table-card"><div class="table-wrap"><table><thead><tr><th>Data</th><th>Disciplina</th><th>Conteúdo</th><th>Duração</th><th>Ações</th></tr></thead><tbody id="historyTable"></tbody></table></div></article>
+      </section>
+
+      <section id="page-perfil" class="page">
+        <div class="page-heading"><div><p class="eyebrow">CONTA</p><h1>Meu Perfil</h1><p>Gerencie suas informações pessoais.</p></div></div>
+        <article class="card profile-card">
+          <div class="profile-cover"></div><div class="profile-main"><div class="avatar huge">CV</div><div><h2>Caio Victor</h2><p>Estudante • Sistemas de Informação</p></div></div>
+          <form class="profile-form"><div class="two-cols"><label>Nome<input value="Caio Victor"></label><label>E-mail<input value="caio@email.com"></label></div><div class="two-cols"><label>Curso<input value="Sistemas de Informação"></label><label>Semestre<input value="8º semestre"></label></div><button type="button" class="primary" id="saveProfile">Salvar alterações</button></form>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal"><div class="modal-box"><button class="modal-close" id="modalClose">×</button><h2 id="modalTitle">Novo item</h2><form id="modalForm"></form></div></div>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
